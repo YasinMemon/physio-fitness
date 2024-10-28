@@ -40,6 +40,7 @@ function Appointment() {
             setEmail('');
             setAge('');
             setDesc('');
+            alert(response.data.message);
         } catch (err) {
             console.error(err);
             setError('Failed to book appointment. Please try again later.');

@@ -5,22 +5,26 @@ function Doctors() {
         {
             img: './doctors/Urvashi.png',
             name: "Dr. Urvashi Kaneriya",
-            degree: "M.P.T. ( Orthopedic & Sports)"
+            degree: "M.P.T. ( Orthopedic & Sports)",
+            details: "Dr. Urvashi specializes in orthopedic and sports physiotherapy with over 10 years of experience."
         },
         {
             img: './doctors/Mask group.png',
             name: "Dr. Krishna Sarvaiya",
-            degree: "M.P.T. ( Orthopedic & Sports)"
+            degree: "M.P.T. ( Orthopedic & Sports)",
+            details: "Dr. Krishna has extensive experience in sports-related injuries and rehabilitation."
         },
         {
             img: "./doctors/diya.png",
             name: "Dr. Diya Patel",
-            degree: "BPT"
+            degree: "BPT",
+            details: "Dr. Diya is skilled in physiotherapy treatments focusing on pain management and recovery."
         },
         {
             img: "./doctors/keya.png",
             name: "Dr. kEYA vYAS",
-            degree: "B.P.T"
+            degree: "B.P.T",
+            details: "Dr. Keya has a special interest in pediatric physiotherapy and holistic wellness."
         }
     ]
   return (

@@ -20,20 +20,30 @@ export default function App() {
       <Navbar/>
       <Hero/>
       <div className="sm:px-10 px-2 text-center">
+      <div id="who">
       <Welcome/>
+      </div>
       <Doctors/>
+      <div id="srvs">
       <Consultation/>
+      </div>
       <Services/>
       <Trust/>
       <Feel/>
+      <div id="tstimnyls">
       <Inspiration/>
+      </div>
       <Moving/>
+      <div id="exprt">
       <Experts/>
+      </div>
       <MaskGroup/>
       <Pain/>
       <FAQs/>
       </div>
+      <div id="apointmnt">
       <Appointment/>
+      </div>
       <Footer/>
     </div>
 }

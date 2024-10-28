@@ -29,7 +29,8 @@ function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return <>
+    {/* <div className='bg-black min-h-[100vh] overflow-hidden w-[100%] opacity-50 fixed z-10 top-0'></div> */}
     <div className="overflow-x-hidden">
       {imgs.map((img, index) => (
         <div
@@ -46,9 +47,10 @@ function Hero() {
             src={img.src}
             alt="Hero"
           />
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
           {/* Text Overlay */}
-          <div className="absolute top-[25%] sm:top-[20%] lg:top-[25%] left-6 sm:left-12 lg:left-24 w-[80%] sm:w-[60%] lg:w-[40%] text-white space-y-4">
+          <div className="absolute top-[25%] sm:top-[20%] lg:top-[25%] font-bold left-6 sm:left-12 lg:left-24 w-[80%] sm:w-[60%] lg:w-[40%] text-white space-y-4">
             <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl leading-tight">
               {img.title}
             </h1>
@@ -56,13 +58,13 @@ function Hero() {
               {img.para}
             </p>
             <button className="bg-white text-black font-bold rounded-xl px-6 py-2 mt-4 hover:bg-gray-300 transition-all duration-300">
-              BOOK APPOINTMENT
+            <a href="#apointmnt">BOOK APPOINTMENT</a>
             </button>
           </div>
         </div>
       ))}
     </div>
-  );
+    </>
 }
 
 export default Hero;

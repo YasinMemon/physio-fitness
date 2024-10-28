@@ -23,11 +23,11 @@ function Navbar() {
       {/* Mobile Menu */}
       {showNav && (
         <ul className="sm:hidden flex flex-col items-center gap-4 p-4 bg-gray-700 text-white">
-          <li>Who We Are</li>
-          <li>Our Services</li>
-          <li>Testimonials</li>
-          <li>Experts Tips</li>
-          <li>Contact Us</li>
+          <li className='cursor-pointer'><a href="#who">Who We Are</a></li>
+          <li className='cursor-pointer'><a href="#srvs">Our Services</a></li>
+          <li className='cursor-pointer'><a href="#tstimnyls">Testimonials</a></li>
+          <li className='cursor-pointer'><a href="#exprt">Experts Tips</a></li>
+          <li className='cursor-pointer'><a href="#apointmnt">Contact Us</a></li>
         </ul>
       )}
 
@@ -41,14 +41,14 @@ function Navbar() {
           />
         </div>
         <ul className="flex items-center gap-6">
-          <li>Who We Are</li>
-          <li>Our Services</li>
-          <li>Testimonials</li>
-          <li>Experts Tips</li>
-          <li>Contact Us</li>
+        <li className='cursor-pointer'><a href="#who">Who We Are</a></li>
+        <li className='cursor-pointer'><a href="#srvs">Our Services</a></li>
+        <li className='cursor-pointer'><a href="#tstimnyls">Testimonials</a></li>
+        <li className='cursor-pointer'><a href="#exprt">Experts Tips</a></li>
+        <li className='cursor-pointer'><a href="#apointmnt">Contact Us</a></li>
         </ul>
         <button className="rounded-lg ring-1 ring-white px-6">
-          BOOK APPOINTMENT
+          <a href="#apointmnt">BOOK APPOINTMENT</a>
         </button>
       </nav>
       <hr className="hidden sm:block" />
