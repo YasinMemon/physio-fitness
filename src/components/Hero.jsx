@@ -31,7 +31,7 @@ function Hero() {
 
   return <>
     {/* <div className='bg-black min-h-[100vh] overflow-hidden w-[100%] opacity-50 fixed z-10 top-0'></div> */}
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden transition-transform">
       {imgs.map((img, index) => (
         <div
           key={img.src}
@@ -41,6 +41,7 @@ function Hero() {
             display: currentIMG === index ? 'block' : 'none',
             position: 'relative',
           }}
+          
         >
           <img
             className="object-cover w-full h-full absolute"

@@ -1,6 +1,7 @@
 import Appointment from "./components/Appointment";
 import Consultation from "./components/Consultation";
 import Doctors from "./components/Doctors";
+import DR from "./components/DR";
 import Experts from "./components/Experts";
 import FAQs from "./components/FAQs";
 import Feel from "./components/Feel";
@@ -23,7 +24,8 @@ export default function App() {
       <div id="who">
       <Welcome/>
       </div>
-      <Doctors/>
+      {/* <Doctors/> */}
+      <DR/>
       <div id="srvs">
       <Consultation/>
       </div>

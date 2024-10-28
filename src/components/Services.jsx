@@ -58,21 +58,24 @@ function Services() {
       </div>
 
       {selectedService && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-8 max-w-lg w-full relative">
+        <div className="fixed inset-0 flex justify-end z-50">
+          <div
+            className="bg-[#0F7078] text-white w-1/2 h-full p-10 overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()} // Prevents closing popup when clicking inside
+          >
             <button
               onClick={closeDetails}
-              className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl font-bold"
+              className="absolute top-4 right-4 text-white text-2xl font-bold"
             >
               &times;
             </button>
             <img
-              className="w-full h-60 object-cover rounded-lg mb-4"
               src={selectedService.img}
               alt={selectedService.name}
+              className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <p className="font-bold text-xl mb-2">{selectedService.name}</p>
-            <p className="text-gray-700 text-sm">{selectedService.description}</p>
+            <p className="font-bold text-2xl mb-4">{selectedService.name}</p>
+            <p className="text-white text-base">{selectedService.description}</p>
           </div>
         </div>
       )}
