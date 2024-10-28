@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Doctors.css'
 
 function Doctors() {
   const doctors = [
@@ -49,39 +50,29 @@ function Doctors() {
           <div
             key={doctor.name}
             onClick={() => showDetails(doctor)}
-            className="cursor-pointer rounded-lg shadow-lg p-4 text-center transform hover:scale-105 transition duration-200"
+            className="flip-card cursor-pointer rounded-lg shadow-lg p-4 text-center transform hover:scale-105 transition duration-200"
           >
+            <div className="card-front">
             <img
               className="w-full h-60 object-cover rounded-lg mb-4"
               src={doctor.img}
               alt={doctor.name}
-            />
+              />
             <p className="font-bold text-lg">{doctor.name}</p>
             <p className="text-sm text-gray-600">{doctor.degree}</p>
+            </div>
           </div>
         ))}
       </div>
 
-      {selectedDoctor && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-8 max-w-lg w-full relative">
-            <button
-              onClick={closeDetails}
-              className="absolute top-2 right-2 text-gray-600 hover:text-black"
-            >
-              &times;
-            </button>
-            <img
-              className="w-full h-60 object-cover rounded-lg mb-4"
-              src={selectedDoctor.img}
-              alt={selectedDoctor.name}
-            />
-            <p className="font-bold text-xl mb-2">{selectedDoctor.name}</p>
-            <p className="text-sm text-gray-600 mb-4">{selectedDoctor.degree}</p>
-            <p className="text-gray-700">{selectedDoctor.details}</p>
-          </div>
-        </div>
-      )}
+      {selectedDoctor && <>
+         <div className="flip-card-back absolute bg-white w-96 p-10 ring-1 ring-black rounded-xl">
+          <div className="text-right text-xl font-bold cursor-pointer" onClick={closeDetails} >X</div>
+         <p className="font-bold text-lg mb-2">{selectedDoctor.name}</p>
+         <p className="text-sm text-gray-600 mb-4">{selectedDoctor.degree}</p>
+         <p className="text-gray-700">{selectedDoctor.details}</p>
+       </div>
+       </>}
     </div>
   );
 }
