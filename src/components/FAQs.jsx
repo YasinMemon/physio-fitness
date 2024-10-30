@@ -4,13 +4,13 @@ function FAQs() {
   return (
     <div className='flex flex-col sm:flex-row justify-center items-center gap-10 px-5 mb-10'>
       <div className="leftside text-left sm:w-[40%] w-full">
-        <p className='text-[#008A96] font-bold'>Answers That Matter</p>
-        <h2 className="text-2xl font-semibold mb-2">Frequently Asked Questions</h2>
-        <p className="text-gray-600">
+        <p className='text-[#008A96] font-bold youth'>Answers That Matter</p>
+        <h2 className="text-2xl font-semibold mb-2 youth">Frequently Asked Questions</h2>
+        <p className="text-gray-600 ambit">
           Find answers to your most common questions about physiotherapy. Our FAQ section provides clear and concise information to help you learn more about physiotherapy.
         </p>
       </div>
-      <div className="rightside text-left sm:w-[50%] w-full">
+      <div className="rightside text-left sm:w-[50%] w-full ambit">
         <details className='bg-white border border-gray-300 p-3 mb-3 rounded-lg'>
             <summary className="font-semibold cursor-pointer">Who can benefit from physiotherapy?</summary>
             <p className="mt-2 text-gray-700">

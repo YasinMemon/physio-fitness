@@ -8,7 +8,7 @@ function Consultation() {
         <h1 className='text-2xl youth'>wide range of  our  physiotherapy treatments, Find the right treatment for you.</h1>
       </div>
       <div className="rightside sm:w-[50vw] youth text-start">
-        <p>
+        <p className='ambit'>
         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
         </p>
         <button className='bg-[#008A96] px-6 py-1 text-white rounded-full mt-4'>Schedule Consultation</button>

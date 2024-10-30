@@ -72,7 +72,7 @@ function Services() {
               alt={service.title}
               className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#0F7078] font-bold text-lg mb-2">{service.title}</p>
+            <p className="text-[#0F7078] font-bold text-lg youth mb-2">{service.title}</p>
           </div>
         ))}
       </div>
@@ -94,8 +94,8 @@ function Services() {
               alt={selectedService.title}
               className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <p className="font-bold text-2xl mb-4">{selectedService.title}</p>
-            <p className="text-white text-base">{selectedService.description}</p>
+            <p className="font-bold text-2xl youth mb-4">{selectedService.title}</p>
+            <p className="text-white text-base ambit">{selectedService.description}</p>
           </div>
         </div>
       )}

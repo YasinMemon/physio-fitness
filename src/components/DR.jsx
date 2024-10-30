@@ -61,10 +61,10 @@ function DR() {
                         <div className="card-front flex flex-col items-center">
                             <img className="h-[40vh] object-cover" src={dr.image} alt={`Image of ${dr.name}`} />
                             <p className="font-bold mt-2 youth">{dr.name}</p>
-                            <p>{dr.designation}</p>
+                            <p className='ambit'>{dr.designation}</p>
                         </div>
                         <div className="card-back w-[100%] h-[100%] flex items-center justify-center p-4">
-                            <p>{dr.description}</p>
+                            <p className='ambit'>{dr.description}</p>
                         </div>
                     </div>
                 </div>

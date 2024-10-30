@@ -50,8 +50,8 @@ function Appointment() {
     }
   return (
     <div className='bg-[#0F7078] text-center p-5 sm:p-14'>
-      <p className='font-bold text-2xl text-white'>Book Your Appointment Now</p>
-      <p className='font-bold text-2xl text-white'>Fill Out the form below</p>
+      <p className='font-bold text-2xl text-white youth'>Book Your Appointment Now</p>
+      <p className='font-bold text-2xl text-white youth'>Fill Out the form below</p>
       <form 
       className='mt-10'
       onSubmit={handleSubmit} 

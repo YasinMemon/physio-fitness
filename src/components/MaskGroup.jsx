@@ -10,7 +10,7 @@ function MaskGroup() {
             await fetch('https://physiofitnessrajkot.com/api/blog-list').
             then((res) => res.json()).
             then((data) => {
-                console.log(data) 
+                // console.log(data) 
                 setblog(data);
             }
             ).catch((err) => console.log(err)
@@ -47,8 +47,8 @@ function MaskGroup() {
             >
               &times;
             </button>
-            <h1 className="font-bold text-2xl pb-4">BTL ELECTROTHERAPY</h1>
-            <p>
+            <h1 className="font-bold text-2xl pb-4 youth">BTL ELECTROTHERAPY</h1>
+            <p className='ambit'>
               Physio Fitness offers BTL Electrotherapy, a cutting-edge treatment that uses electricity to stimulate your body's healing process. It's a safe and effective way to relieve pain, reduce inflammation, improve muscle function, and promote tissue regeneration. Our experienced physiotherapists will tailor your BTL Electrotherapy treatment to your specific needs. Whether you're recovering from an injury, managing chronic pain, or seeking to improve your overall well-being, BTL Electrotherapy can be a valuable tool in your healing journey.
             </p>
             <button className="mt-6 px-6 py-2 bg-white text-[#0F7078] font-bold rounded">Inquire Now</button>

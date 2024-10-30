@@ -21,7 +21,7 @@ export default function App() {
   return <div>
       <Nav/>
       <Hero/>
-      <div className="sm:px-10 px-2 text-center ambit">
+      <div className="sm:px-10 px-2 text-center">
       <div id="who">
       <Welcome/>
       </div>

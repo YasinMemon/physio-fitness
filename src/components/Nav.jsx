@@ -11,14 +11,14 @@ function Nav() {
 
       {/* Mobile Nav */}
       <div className="sm:hidden flex justify-between items-center p-4 relative z-20">
-        <div className="logo">
+        <div className="logo font-bold">
           <img
             src="./logo/logo.png"
             alt="PHYSIO FITNESS"
             className="h-[24px]"
           />
         </div>
-        <div className="Burger text-white cursor-pointer">
+        <div className="Burger cursor-pointer text-black">
           <GiHamburgerMenu onClick={() => setshowNav((prev) => !prev)} size={24} />
         </div>
       </div>
