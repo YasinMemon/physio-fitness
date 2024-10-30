@@ -5,7 +5,7 @@ function Navbar() {
   const [showNav, setshowNav] = useState(false);
 
   return (
-    <div className="fixed z-20 top-0 w-full text-white shadow-md overflow-x-hidden bg-gray-800 sm:bg-transparent">
+    <div className="fixed z-20 top-0 w-full ambit text-white shadow-md overflow-x-hidden bg-gray-800 sm:bg-transparent">
       {/* Mobile Navbar */}
       <div className="sm:hidden flex justify-between items-center p-4">
         <div className="logo">

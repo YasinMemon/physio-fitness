@@ -2,7 +2,7 @@ import React from 'react'
 
 function Trust() {
   return (
-    <div className='bg-[#0F7078] mt-14 rounded-xl text-white px-2 sm:px-0'>
+    <div className='bg-[#0F7078] mt-14 rounded-xl text-white px-2 sm:px-0 ambit'>
       <h1 className='text-xl font-bold pt-14 text-white'>Why We're Your Trusted Choice <br /> for Physiotherapy treatments?</h1>
       <p className='text-white my-4'>Choose Physio Fitness for personalized care and expert guidance. Our team of <br />experienced therapists is dedicated to your recovery and success.</p>
       <hr />

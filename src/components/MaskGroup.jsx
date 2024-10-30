@@ -1,6 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function MaskGroup() {
+
+  const [blog, setblog] = useState([]);
+  useEffect(() => {
+ 
+    const getBlogs = async () => {
+        try {
+            await fetch('https://physiofitnessrajkot.com/api/blog-list').
+            then((res) => res.json()).
+            then((data) => {
+                console.log(data) 
+                setblog(data);
+            }
+            ).catch((err) => console.log(err)
+            )
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    getBlogs();
+},[]);
+
   const [show, setShow] = useState(false);
 
   const togglePopup = () => {
@@ -15,7 +37,7 @@ function MaskGroup() {
           onClick={togglePopup}
         >
           <div
-            className="bg-[#0F7078] text-white w-1/2 h-full p-10 overflow-y-auto relative"
+            className="bg-[#0F7078] text-white sm:w-1/2 h-full p-10 overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()} // Prevents closing popup when clicking inside
           >
             <button
@@ -34,16 +56,19 @@ function MaskGroup() {
         </div>
       )}
 
-      <div className="sm:grid sm:grid-cols-4 flex sm:overflow-hidden overflow-x-scroll gap-2 justify-center items-center mt-20 mb-10">
-        {[...Array(4)].map((_, index) => (
-          <img
+      <div className="sm:grid relative sm:grid-cols-4 flex sm:overflow-hidden overflow-x-scroll gap-2 justify-center items-center mt-20 mb-10">
+        {blog.map((blog, index) => {
+        return <>  <img
             key={index}
             onClick={togglePopup}
             className="sm:w-[330px] cursor-pointer transition-transform transform hover:scale-105"
-            src="./spine.png"
-            alt={`Spine ${index + 1}`}
+            src={blog.image}
+            alt="image not found"
           />
-        ))}
+          <p className='absolute left-[8.5rem] text-white text-xl font-bold top-12'>{blog.title}</p>
+          <p className='absolute left-[8.5rem] top-[4.5rem]'>{blog.description}</p>
+          </> }
+        )}
       </div>
     </>
   );

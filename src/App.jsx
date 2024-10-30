@@ -15,12 +15,13 @@ import Pain from "./components/Pain";
 import Services from "./components/Services";
 import Trust from "./components/Trust";
 import Welcome from "./components/Welcome";
+import Nav from "./components/Nav"
 
 export default function App() {
   return <div>
-      <Navbar/>
+      <Nav/>
       <Hero/>
-      <div className="sm:px-10 px-2 text-center">
+      <div className="sm:px-10 px-2 text-center ambit">
       <div id="who">
       <Welcome/>
       </div>
