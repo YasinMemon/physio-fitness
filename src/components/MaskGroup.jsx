@@ -1,74 +1,116 @@
 import React, { useEffect, useState } from 'react';
 
 function MaskGroup() {
+  const [blogs, setBlogs] = useState([]);
+  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [show, setShow] = useState(false);
 
-  const [blog, setblog] = useState([]);
   useEffect(() => {
- 
     const getBlogs = async () => {
-        try {
-            await fetch('https://physiofitnessrajkot.com/api/blog-list').
-            then((res) => res.json()).
-            then((data) => {
-                // console.log(data) 
-                setblog(data);
-            }
-            ).catch((err) => console.log(err)
-            )
-        } catch (error) {
-            console.log(error);
-        }
-    }
+      try {
+        const response = await fetch('https://physiofitnessrajkot.com/api/blog-list');
+        const data = await response.json();
+        setBlogs(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
     getBlogs();
-},[]);
-
-  const [show, setShow] = useState(false);
+  }, []);
 
   const togglePopup = () => {
     setShow(!show);
   };
 
+  const handleCardClick = (blog) => {
+    setSelectedBlog(blog);
+    togglePopup();
+  };
+
+  const jumpToNextBlog = () => {
+    const currentIndex = blogs.findIndex((b) => b.id === selectedBlog.id);
+    if (currentIndex < blogs.length - 1) {
+      setSelectedBlog(blogs[currentIndex + 1]);
+    } else {
+      alert('No more blogs available');
+    }
+  };
+
+  const jumpToPrevBlog = () => {
+    const currentIndex = blogs.findIndex((b) => b.id === selectedBlog.id);
+    if (currentIndex > 0) {
+      setSelectedBlog(blogs[currentIndex - 1]);
+    } else {
+      alert('No previous blogs available');
+    }
+  };
+
   return (
     <>
-      {show && (
+      {show && selectedBlog && (
         <div
           className="fixed inset-0 flex justify-end z-50"
           onClick={togglePopup}
         >
           <div
             className="bg-[#0F7078] text-white sm:w-1/2 h-full p-10 overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()} // Prevents closing popup when clicking inside
+            onClick={(e) => e.stopPropagation()}
           >
+            <img
+              src="/desine.png"
+              className="absolute transform -scale-x-100 h-[340px] w-[223px] top-0 right-0 opacity-20"
+              alt=""
+            />
             <button
-              className="absolute top-4 right-4 text-white text-2xl font-bold"
+              className="absolute top-4 right-4 text-2xl font-bold text-black"
               onClick={togglePopup}
               aria-label="Close popup"
             >
               &times;
             </button>
-            <h1 className="font-bold text-2xl pb-4 youth">BTL ELECTROTHERAPY</h1>
-            <p className='ambit'>
-              Physio Fitness offers BTL Electrotherapy, a cutting-edge treatment that uses electricity to stimulate your body's healing process. It's a safe and effective way to relieve pain, reduce inflammation, improve muscle function, and promote tissue regeneration. Our experienced physiotherapists will tailor your BTL Electrotherapy treatment to your specific needs. Whether you're recovering from an injury, managing chronic pain, or seeking to improve your overall well-being, BTL Electrotherapy can be a valuable tool in your healing journey.
-            </p>
-            <button className="mt-6 px-6 py-2 bg-white text-[#0F7078] font-bold rounded">Inquire Now</button>
+            <h1 className="font-bold text-[22px] pb-4 youth">
+              {selectedBlog.title}
+            </h1>
+            <p className="ambit">{selectedBlog.description}</p>
+            <div>
+              <button
+                onClick={jumpToNextBlog}
+                className="mt-12 px-6 py-2 bg-white text-[#0F7078] font-bold mr-4 rounded-full"
+              >
+                Jump To Next Blog
+              </button>
+              <button
+                onClick={jumpToPrevBlog}
+                className="mt-6 px-6 py-2 text-white ring-1 ring-white bg-[#0F7078] font-bold rounded-full"
+              >
+                Jump To Previous Blog
+              </button>
+            </div>
           </div>
         </div>
       )}
 
       <div className="sm:grid relative sm:grid-cols-4 flex sm:overflow-hidden overflow-x-scroll gap-2 justify-center items-center mt-20 mb-10">
-        {blog.map((blog, index) => {
-        return <>  <img
+        {blogs.map((blog, index) => (
+          <div
             key={index}
-            onClick={togglePopup}
-            className="sm:w-[330px] cursor-pointer transition-transform transform hover:scale-105"
-            src={blog.image}
-            alt="image not found"
-          />
-          <p className='absolute left-[8.5rem] text-white text-xl font-bold top-12'>{blog.title}</p>
-          <p className='absolute left-[8.5rem] top-[4.5rem]'>{blog.description}</p>
-          </> }
-        )}
+            onClick={() => handleCardClick(blog)}
+            className="cursor-pointer relative"
+          >
+            <img
+              className="sm:w-[330px] transition-transform transform hover:scale-105"
+              src={blog.image}
+              alt="Blog"
+            />
+            <p className="absolute left-[8.5rem] text-white text-xl font-bold top-12">
+              {blog.title}
+            </p>
+            <p className="absolute left-[8.5rem] top-[4.5rem]">
+              {blog.description}
+            </p>
+          </div>
+        ))}
       </div>
     </>
   );

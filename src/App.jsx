@@ -16,11 +16,13 @@ import Services from "./components/Services";
 import Trust from "./components/Trust";
 import Welcome from "./components/Welcome";
 import Nav from "./components/Nav"
+import HeroTmp from "./components/HeroTmp";
 
 export default function App() {
   return <div>
       <Nav/>
-      <Hero/>
+      {/* <Hero/> */}
+      <HeroTmp/>
       <div className="sm:px-10 px-2 text-center">
       <div id="who">
       <Welcome/>

@@ -40,7 +40,7 @@ function Nav() {
           <img
             src="./logo/logo.png"
             alt="PHYSIO FITNESS"
-            className="h-[36px]"
+            className="h-[50px]"
           />
         </div>
         <ul className="flex items-center gap-6  text-white">
@@ -50,7 +50,7 @@ function Nav() {
           <li className="cursor-pointer"><a href="#exprt">Experts Tips</a></li>
           <li className="cursor-pointer"><a href="#apointmnt">Contact Us</a></li>
         </ul>
-        <button className="rounded-lg ring-1 ring-white px-6 text-white">
+        <button className="rounded-full ring-1 sm:text-[18px] ring-white px-6 text-white">
           <a href="#apointmnt">BOOK APPOINTMENT</a>
         </button>
       </nav>

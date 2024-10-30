@@ -63,9 +63,9 @@ function Services() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl w-full">
         {services.map((service) => (
           <div
-            key={service}
-            onClick={() => showDetails(service)}
-            className="cursor-pointer rounded-lg shadow-lg p-4 text-center transform hover:scale-105 transition duration-200"
+          key={service}
+          onClick={() => showDetails(service)}
+          className="cursor-pointer rounded-lg shadow-lg p-4 text-center transform hover:scale-105 transition duration-200"
           >
             <img
               src={service.image}
@@ -77,8 +77,13 @@ function Services() {
         ))}
       </div>
 
-      {selectedService && (
-        <div className="fixed inset-0 flex justify-end z-50">
+      {selectedService && <>
+        <img
+              src="/desine.png"
+              className="absolute transform -scale-x-100 h-[340px] w-[223px] top-0 right-0 opacity-20"
+              alt=""
+            />
+                    <div className="fixed inset-0 flex justify-end z-50">
           <div
             className="bg-[#0F7078] text-white sm:w-1/2 h-full p-10 overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()} // Prevents closing popup when clicking inside
@@ -89,16 +94,18 @@ function Services() {
             >
               &times;
             </button>
-            <img
-              src={selectedService.image}
-              alt={selectedService.title}
-              className="w-full h-60 object-cover rounded-lg mb-4"
-            />
             <p className="font-bold text-2xl youth mb-4">{selectedService.title}</p>
+            <div className="text-left">
             <p className="text-white text-base ambit">{selectedService.description}</p>
+            </div>
+            <div className="text-left">
+            <button
+            onClick={closeDetails}
+            className="bg-white sm:w-[115px] text-nowrap sm:h-[30px] sm:text-[18px] text-black rounded-full mt-4 font-bold"><a href="#apointmnt">Inqure now</a></button>
+            </div>
           </div>
         </div>
-      )}
+        </>}
     </div>
   );
 }

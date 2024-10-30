@@ -58,7 +58,7 @@ function Hero() {
             <p className="text-sm ambit sm:text-base lg:text-lg leading-relaxed">
               {img.para}
             </p>
-            <button className="bg-white text-black font-bold rounded-xl px-6 py-2 mt-4 hover:bg-gray-300 transition-all duration-300">
+            <button className="bg-white text-black font-bold rounded-full px-6 py-2 mt-4 hover:bg-gray-300 transition-all duration-300">
             <a href="#apointmnt">BOOK APPOINTMENT</a>
             </button>
           </div>

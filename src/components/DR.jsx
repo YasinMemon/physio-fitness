@@ -54,17 +54,26 @@ function DR() {
     // ];
 
     return (
-        <div className="doctors-container flex flex-wrap justify-center gap-6 mt-10 mx-auto">
+        <div className="doctors-container flex flex-wrap justify-left gap-6 mt-10 mx-auto">
             {doctors.map((dr, index) => (
                 <div key={index} className="mainContainer cursor-pointer h-[320px] overflow-hidden w-[250px]">
                     <div className="card-main w-[100%] h-[100%]">
-                        <div className="card-front flex flex-col items-center">
+                        <div className="card-front flex flex-col items-start text-left">
                             <img className="h-[40vh] object-cover" src={dr.image} alt={`Image of ${dr.name}`} />
-                            <p className="font-bold mt-2 youth">{dr.name}</p>
-                            <p className='ambit'>{dr.designation}</p>
-                        </div>
-                        <div className="card-back w-[100%] h-[100%] flex items-center justify-center p-4">
+                            <p className="font-bold mt-2 youth text-left">{dr.name}</p>
+                            <p className='ambit text-left'>{dr.designation}</p>
+                        </div> 
+                        <div className="card-back text-white sm:text-[14px] bg-[#008A96]  rounded-xl w-[100%] h-[100%]  items-center flex-col  justify-center ">
+                            <div>
                             <p className='ambit'>{dr.description}</p>
+                            </div>
+                            <hr className='w-full mt-4' />
+                            <div className="mt-10">
+                            <p className='font-bold'>{dr.name}</p>
+                            </div>
+                            <div>
+                            <p>{dr.designation}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

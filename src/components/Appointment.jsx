@@ -49,9 +49,11 @@ function Appointment() {
         }
     }
   return (
-    <div className='bg-[#0F7078] text-center p-5 sm:p-14'>
-      <p className='font-bold text-2xl text-white youth'>Book Your Appointment Now</p>
-      <p className='font-bold text-2xl text-white youth'>Fill Out the form below</p>
+    <div className='bg-[#0F7078] relative text-center p-5 sm:p-14'>
+      <img className='absolute h-[542px] w-[335px] opacity-10 top-0 left-0' src="/desine.png" alt="" srcset="" />
+      <img className='absolute h-[542px] w-[335px] bottom-0 right-0 transform -scale-x-100 opacity-10 -scale-y-100' src="/desine.png" alt="" srcset="" />
+      <p className='font-bold text-2xl text-white youth sm:text-[48px]'>Book Your Appointment Now</p>
+      <p className='font-bold text-2xl text-white youth sm:text-[48px] sm:mt-4'>Fill Out the form below</p>
       <form 
       className='mt-10'
       onSubmit={handleSubmit} 
