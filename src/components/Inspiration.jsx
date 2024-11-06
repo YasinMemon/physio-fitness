@@ -5,8 +5,8 @@ function Inspiration() {
     <div className="relative">
       <p className='text-[#008A96] ambit'>Community of Care</p>
       <hr className='w-[20vw] text-center mx-auto my-4' />
-      <h2 className='font-bold text-xl font-serif mt-4 youth sm:text-[40px]'>Inspiring Journeys:</h2>
-      <h2 className='font-bold text-xl font-serif youth sm:mt-4 sm:text-[40px]'>Physiotherapy Changed Their Lives</h2>
+      <h2 className='font-bold text-xl font-serif mt-4 youth sm:text-[40px] sm:leading-[45px]'>Inspiring Journeys:</h2>
+      <h2 className='font-bold text-xl font-serif youth sm:text-[40px] sm:leading-[45px]'>Physiotherapy Changed Their Lives</h2>
       <p className='mt-2 ambit sm:text-[18px]'>Hear directly from our satisfied patients in these inspiring video testimonials. Watch them share their</p>
       <p className='ambit sm:text-[18px]'>personal journeys of recovery and transformation through physiotherapy.</p>
       

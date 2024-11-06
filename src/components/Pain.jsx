@@ -13,13 +13,10 @@ function Pain() {
             src="/desine.png" 
             alt="" 
           />
-      <h1 className="font-bold text-2xl font-serif text-white youth sm:text-[40px]">
-        Living with Pain and Injuries?
+      <h1 className="font-bold text-2xl font-serif text-white youth sm:text-[40px] sm:leading-[45px]">
+        Living with Pain and Injuries? Get long Relief with our Treatments{" "}
       </h1>
-      <h2 className="font-bold text-2xl sm:mt-3 font-serif text-white youth sm:text-[40px]">
-        Get long Relief with our Treatments{" "}
-      </h2>
-      <p className="text-white mt-4 ambit sm:text-[18px]">
+      <p className="text-white mt-4 ambit sm:text-[18px] sm:leading-[30px]">
         Living with Pain and Injuries? Get long Relief with our Treatments Our
         team of skilled physiotherapists is here to help. Experience the
         benefits of our effective solutions and start your journey to recovery

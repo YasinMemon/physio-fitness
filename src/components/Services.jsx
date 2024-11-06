@@ -72,7 +72,7 @@ function Services() {
               alt={service.title}
               className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#0F7078] font-bold text-lg youth mb-2">{service.title}</p>
+            <p className="text-[#0F7078] font-bold text-lg youth mb-2 text-start">{service.title}</p>
           </div>
         ))}
       </div>

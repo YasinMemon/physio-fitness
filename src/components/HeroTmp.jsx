@@ -26,8 +26,7 @@ function HeroTmp() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  return (
-    <div className="overflow-x-hidden transition-transform">
+  return <> <div className="overflow-x-hidden transition-transform">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -60,7 +59,7 @@ function HeroTmp() {
         </div>
       ))}
     </div>
-  );
+    </>
 }
 
 export default HeroTmp;

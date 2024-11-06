@@ -28,7 +28,7 @@
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    align-items: center;
+    align-items: start;
     /* flex-direction: row; */
     justify-content: center;
     padding: 1rem;

@@ -5,7 +5,7 @@ function Experts() {
     <div className='mt-20 flex sm:px-10 gap-4 sm:gap-10 sm:flex-row flex-col justify-center items-center'>
       <div className="leftside font-bold sm:w-[50vw] text-start">
         <p className='text-[#008A96] ambit'>Guide to Well-being</p>
-        <h1 className='text-2xl youth sm:text-[40px]'>Expert Tips and Advice
+        <h1 className='text-2xl youth sm:text-[40px] sm:leading-[45px]'>Expert Tips and Advice
         Health and Wellness Guide by Physio-Fitness</h1>
       </div>
       <div className="rightside sm:w-[50vw] text-start ambit sm:text-[18px]">
