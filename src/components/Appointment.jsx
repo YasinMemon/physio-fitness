@@ -49,12 +49,15 @@ function Appointment() {
         }
     }
   return (
-    <div className='bg-[#0F7078] relative text-center p-5 sm:p-14'>
-      <img className='absolute h-[542px] w-[335px] opacity-10 top-0 left-0' src="/desine.png" alt="" srcset="" />
-      <img className='absolute h-[542px] w-[335px] bottom-0 right-0 transform -scale-x-100 opacity-10 -scale-y-100' src="/desine.png" alt="" srcset="" />
+    <div className='bg-[#0F7078] relative text-center pt-20 p-5 sm:p-14 overflow-x-hidden'>
+      <img className='absolute h-[542px] w-[335px] hidden sm:block opacity-10 top-0 left-0' src="/desine.png" alt="" srcset="" />
+      <img className='absolute h-[542px] w-[335px] bottom-0 hidden sm:block right-0 transform -scale-x-100 opacity-10 -scale-y-100' src="/desine.png" alt="" srcset="" />
       <p className='sm:leading-[45px] font-bold text-2xl text-white youth sm:text-[48px]'>Book Your Appointment Now <br /> Fill Out the form below</p>
+      <hr className='w-96 mx-auto my-8 opacity-10' />
+      <p className='text-white'>Ready to take the first step towards a pain-free life? <br />
+      Fill out our contact form and schedule your appointment today.</p>
       <form 
-      className='mt-10'
+      className='mt-5'
       onSubmit={handleSubmit} 
       method='post'>
         <input
@@ -98,7 +101,7 @@ function Appointment() {
         </textarea>
         <br />
         <input 
-        className='bg-white px-4 sm:w-[31rem] w-60 rounded-full py-1 mt-3 cursor-pointer'
+        className='bg-white px-4 sm:w-[31rem] w-60 rounded-full py-2 mt-3 cursor-pointer'
         value="Book Your Appointment"
         type="submit" />
       </form>

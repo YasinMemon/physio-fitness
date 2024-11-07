@@ -59,11 +59,11 @@ function MaskGroup() {
           >
             <img
               src="/desine.png"
-              className="absolute transform -scale-x-100 h-[340px] w-[223px] top-0 right-0 opacity-20"
+              className="absolute hidden sm:block transform -scale-x-100 h-[340px] w-[223px] top-0 right-0 opacity-20"
               alt=""
             />
             <button
-              className="absolute top-4 right-4 text-2xl font-bold text-black"
+              className="absolute top-4 right-4 text-2xl font-bold text-white"
               onClick={togglePopup}
               aria-label="Close popup"
             >
@@ -91,12 +91,12 @@ function MaskGroup() {
         </div>
       )}
 
-      <div className="sm:grid relative sm:grid-cols-4 flex sm:overflow-hidden overflow-x-scroll gap-2 justify-center items-center mt-20 mb-10">
+      <div className="sm:grid relative sm:overflow-x-hidden sm:grid-cols-4 flex sm:overflow-hidden overflow-x-scroll gap-2 justify-center items-center mt-20 mb-10">
         {blogs.map((blog, index) => (
           <div
             key={index}
             onClick={() => handleCardClick(blog)}
-            className="cursor-pointer relative"
+            className="cursor-pointer relative overflow-hidden"
           >
             <img
               className="sm:w-[330px] transition-transform transform hover:scale-105"

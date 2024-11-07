@@ -59,7 +59,7 @@ function Services() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full mt-16 px-4">
+    <div className="flex flex-col overflow-x-hidden items-center w-full mt-16 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl w-full">
         {services.map((service) => (
           <div
@@ -72,7 +72,7 @@ function Services() {
               alt={service.title}
               className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#0F7078] font-bold text-lg youth mb-2 text-start">{service.title}</p>
+            <p className="text-[#0F7078] font-bold text-lg youth mb-2 text-start uppercase">{service.title}</p>
           </div>
         ))}
       </div>
@@ -80,7 +80,7 @@ function Services() {
       {selectedService && <>
         <img
               src="/desine.png"
-              className="absolute transform -scale-x-100 h-[340px] w-[223px] top-0 right-0 opacity-20"
+              className="absolute transform -scale-x-100 sm:h-[340px] sm:w-[223px] top-0 right-0 opacity-20"
               alt=""
             />
                     <div className="fixed inset-0 flex justify-end z-50">
@@ -90,18 +90,24 @@ function Services() {
           >
             <button
               onClick={closeDetails}
-              className="absolute top-4 right-4 text-white text-2xl font-bold"
+              className="absolute top-4 right-4 z-50 text-white text-2xl font-bold"
             >
               &times;
             </button>
-            <p className="font-bold text-2xl youth mb-4">{selectedService.title}</p>
+            <img className="absolute right-0 top-0" src="/icons/line.png" alt="" />
+            <div className="pt-20">
+            <p className="font-bold text-2xl text-left mb-4 uppercase text-white">{selectedService.title}</p>
+            <hr className="my-6 opacity-25" />
             <div className="text-left">
             <p className="text-white text-base ambit">{selectedService.description}</p>
             </div>
             <div className="text-left">
+            </div>
+            <div className="text-left">
             <button
             onClick={closeDetails}
-            className="bg-white sm:w-[115px] text-nowrap sm:h-[30px] sm:text-[18px] text-black rounded-full mt-4 font-bold"><a href="#apointmnt">Inqure now</a></button>
+            className="bg-white sm:w-[153px] text-nowrap sm:h-[32px] sm:text-[18px] text-black rounded-full mt-4 sm:py-0 sm:px-0 py-2 px-4 font-bold"><a href="#apointmnt">Inquire Now</a></button>
+            </div>
             </div>
           </div>
         </div>

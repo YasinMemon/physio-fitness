@@ -1,15 +1,36 @@
+/* styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+@font-face {
+    font-family: 'Youth';
+    src: url('./fonts/youthfonts.otf');
+}
+
+h1{
+    color: #122235;
+}
+
+@font-face {
+    font-family: 'Ambit';
+    src: url('./fonts/AmbitLight.otf');
+}
+
+* {
     scroll-behavior: smooth;
+    /* color: #2F323D; */;
+    /* overflow-x: hidden; */
 }
 
-.ambit{
-    font-family: Ambit;
+body{
+    /* overflow-x: hidden; */
 }
 
-.youth{
-    font-family: Youth;
+.youth {
+    font-family: 'Youth', serif;
+}
+
+.ambit {
+    font-family: 'Ambit', sans-serif;
 }

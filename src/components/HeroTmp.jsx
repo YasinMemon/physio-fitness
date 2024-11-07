@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from './Navbar';
 
 function HeroTmp() {
   const [slides, setSlides] = useState([]);
@@ -26,7 +27,10 @@ function HeroTmp() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  return <> <div className="overflow-x-hidden transition-transform">
+  return <> <div className="overflow-x-hidden relative transition-transform">
+    <div className='absolute w-full text-white z-50'>
+    <Navbar/>
+    </div>
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -45,16 +49,15 @@ function HeroTmp() {
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
           {/* Text Overlay */}
-          <div className="absolute top-[25%] sm:top-[20%] lg:top-[25%] font-bold left-6 sm:left-12 lg:left-24 w-[80%] sm:w-[60%] lg:w-[40%] text-white space-y-4">
-            <h1 className="font-bold text-2xl youth sm:text-4xl lg:text-5xl leading-tight">
+          <div className="absolute top-[25%] sm:top-[20%] overflow-hidden lg:top-[25%] left-6 sm:left-12 lg:left-24 w-[80%] sm:w-[60%] lg:w-[40%] text-white space-y-4">
+            <h1 className="font-bold text-white text-2xl youth sm:text-4xl lg:text-5xl leading-tight">
               {slide.title}
             </h1>
-            <p className="text-sm ambit sm:text-base lg:text-lg leading-relaxed">
+            <img className='sm:w-[610px] hidden sm:block h-[10px]' src="/icons/vec.png" alt="" />
+            <p className="text-sm sm:text-base ambit lg:text-lg leading-relaxed">
               {slide.description}
             </p>
-            <button className="bg-white text-black font-bold rounded-full px-6 py-2 mt-4 hover:bg-gray-300 transition-all duration-300">
-              <a href="#apointmnt">BOOK APPOINTMENT</a>
-            </button>
+              <a className='w-[180px] px-4 py-2 text-nowrap absolute bg-white text-[#0E2541] text-[18px] ring-white rounded-full ring-1 ' href="#apointmnt">Book Appointment</a>
           </div>
         </div>
       ))}

@@ -73,10 +73,10 @@ function DR() {
             </div>
             <div className="card-back text-white sm:text-[14px] bg-[#008A96]  rounded-xl w-[100%] h-[100%]  items-center flex-col  justify-center ">
               <div>
-                <p className="ambit">{dr.description}</p>
+                <p className="ambit mt-8">{dr.description}</p>
               </div>
               <hr className="w-full mt-4" />
-              <div className="mt-10">
+              <div className="">
                 <p className="font-bold">{dr.name}</p>
               </div>
               <div>

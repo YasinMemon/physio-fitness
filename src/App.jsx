@@ -6,21 +6,25 @@ import Experts from "./components/Experts";
 import FAQs from "./components/FAQs";
 import Feel from "./components/Feel";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import Inspiration from "./components/Inspiration";
 import MaskGroup from "./components/MaskGroup";
+import Navbar from "./components/Navbar"
 import Moving from "./components/Moving";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Pain from "./components/Pain";
 import Services from "./components/Services";
 import Trust from "./components/Trust";
 import Welcome from "./components/Welcome";
 import Nav from "./components/Nav"
 import HeroTmp from "./components/HeroTmp";
+import Hero from "./components/Hero";
+import Header from "./components/Header";
 
 export default function App() {
   return <div>
-      <Nav/>
+    {/* <Header/> */}
+      {/* <Navbar/> */}
       {/* <Hero/> */}
       <HeroTmp/>
       <div className="sm:px-10 px-2 text-center">

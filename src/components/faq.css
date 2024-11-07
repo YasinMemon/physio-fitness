@@ -1,0 +1,42 @@
+/* Hide the default arrow */
+summary {
+  @apply list-none;
+}
+
+/* Add a custom arrow on the right and increase its size */
+summary::after {
+  content: '▸'; /* Right arrow symbol */
+  @apply float-right text-gray-500 text-xl transition-transform duration-300 ease-in-out;
+}
+
+/* Rotate the arrow when the details element is open */
+details[open] summary::after {
+  @apply rotate-90;
+  color: #008A96; /* Change the color of the arrow when the details are open */
+}
+
+/* Smooth transition for details content */
+details > p {
+  max-height: 0; /* Start with height 0 */
+  overflow: hidden;
+  opacity: 0; /* Start fully transparent */
+  transition: max-height 0.6s ease-in-out, padding-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Expand when open */
+details[open] > p {
+  max-height: 300px; /* Large enough to fit the content */
+  padding-top: 8px; /* Adds spacing smoothly */
+  padding-bottom: 8px;
+  opacity: 1; /* Fade in */
+}
+
+/* Change color of summary when details is open */
+details[open] summary {
+  color: #008A96; /* Change the color when open */
+}
+
+/* Optionally, you can add a color change when the summary is hovered */
+summary:hover {
+  color: #008A96; /* Darker shade on hover */
+}

@@ -6,7 +6,7 @@ function Footer() {
     <footer className="bg-[#0E2541] text-white p-10 sm:flex sm:justify-between sm:items-center">
       {/* First Section */}
       <div className="sm:w-1/4 mb-8 sm:mb-0">
-        <h3 className="text-2xl font-bold youth">Physio Fitness</h3>
+        <img className='sm:w-[180px] sm:h-[80px]' src="./logo/logo.png" alt="" />
         <p className="mt-2 text-gray-300 ambit">
           Rajkot's premier physiotherapy center. Effective treatments, expert care, personalized solutions.
         </p>
@@ -26,7 +26,7 @@ function Footer() {
 
       {/* Second Section */}
       <div className="sm:w-1/4 text-center mb-8 sm:mb-0">
-        <h4 className="text-lg font-semibold">Links</h4>
+        <h4 className="text-lg font-semibold underline">Links</h4>
         <ul className="mt-4 space-y-2 text-gray-300">
           <li><a href="#who" className="hover:text-white">Who We Are</a></li>
           <li><a href="#srvs" className="hover:text-white">Our Services</a></li>
